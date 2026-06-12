@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bad Stuff</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="stage">
+  <section class="paper">
+    <div class="doodle doodle-zap">ϟ</div>
+    <div class="doodle doodle-x">×</div>
+    <div class="doodle doodle-skull">☠</div>
+
+    <div class="left">
+      <h1><span>BAD</span><strong>STUFF</strong></h1>
+      <p class="subtitle">10,000 <em>BAD STUFF</em> LIVING ON ETHEREUM.</p>
+
+      <div class="gallery">
+        <img src="assets/bad-stuff-cover.jpg" alt="Bad Stuff">
+      </div>
+
+      <div class="bottom-buttons">
+        <a class="paper-btn blue" href="https://opensea.io/" target="_blank">🌐 VIEW ON OPENSEA</a>
+        <button id="randomBtn" class="paper-btn green" type="button">🎲 RANDOM BAD STUFF</button>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="mint-box">
+        <h2>BAD STUFF ☆</h2>
+
+        <div class="stat-line"><span>- SUPPLY</span><b>10,000</b></div>
+        <div class="stat-line"><span>- MINTED</span><b id="mintedText">0</b></div>
+        <div class="stat-line"><span>- PRICE</span><b id="priceText">FREE / 0.0001 ETH</b></div>
+
+        <div class="amount-card">
+          <p>MINT AMOUNT</p>
+          <div class="counter">
+            <button id="minus" type="button">−</button>
+            <input id="amount" value="1" inputmode="numeric">
+            <button id="plus" type="button">+</button>
+          </div>
+        </div>
+
+        <p class="note"><span>1ST MINT IS FREE.</span><br>EACH ADDITIONAL MINT IS 0.0001 ETH.</p>
+
+        <button id="connectBtn" class="big yellow" type="button">▰ CONNECT WALLET</button>
+        <button id="mintBtn" class="big red hiddenBtn" type="button">MINT NOW</button>
+
+        <p id="wallet">not connected</p>
+        <p id="status">Insert contract address in app.js</p>
+
+        <div class="progress-label"><span id="progressText">0% MINTED</span></div>
+        <div class="progress-wrap"><div id="progressBar"></div></div>
+        <div class="supply-line"><span></span><b><span id="mintedBottom">0</span> / 10,000</b></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<button id="topConnect" class="floating-connect">Connect</button>
+
+<div id="walletModal" class="modal hidden">
+  <div class="modal-card">
+    <button id="closeModalBtn" class="close" type="button">×</button>
+    <h3>Connect Wallet</h3>
+    <button id="browserWalletBtn" type="button">MetaMask / Rabby / OKX</button>
+    <button id="walletConnectBtn" type="button">WalletConnect / Mobile</button>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
